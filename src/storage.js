@@ -29,7 +29,7 @@ function deleteItem(id) {
 function loadCart() {
   chrome.storage.local.get(['cart'], (result) => {
     const cart = result.cart || [];
-    const container = document.getElementById('sc-items');
+    const container = sidebarShadow.getElementById('sc-items');
     
     if (cart.length === 0) {
       container.innerHTML = '<p class="sc-empty">No items yet</p>';

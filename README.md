@@ -41,7 +41,9 @@ Universal shopping cart that works across all shopping websites.
 - Extension icon shows cart item count
 - Click extension icon to see count and clear cart
 
-## Coming Soon
+## Next Phases
 - Group items by site
-- Price tracking
-- Export cart to spreadsheet
+- Record price and calculate total
+- Fix size not being recorded bug
+- Toggle side panel opening from Google Chrome Extension button in top right
+- UI improvements (button disappears when panel is open, change colors, fonts, add clear button)

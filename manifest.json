@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ShoppingCart",
   "version": "1.0",
-  "description": "Universal shopping cart across all sites",
+  "description": "Universal Shopping Cart",
   "permissions": ["storage", "activeTab"],
   "action": {
     "default_popup": "popup.html"
@@ -15,12 +15,6 @@
         "src/storage.js",
         "src/ui.js",
         "src/content.js"
-      ],
-      "css": [
-        "styles/button.css",
-        "styles/sidebar.css",
-        "styles/item.css",
-        "styles/modal.css"
       ]
     }
   ],
