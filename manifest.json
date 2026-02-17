@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "ShoppingCart",
+  "version": "1.0",
+  "description": "Universal shopping cart across all sites",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "src/detection.js",
+        "src/storage.js",
+        "src/ui.js",
+        "src/content.js"
+      ],
+      "css": [
+        "styles/button.css",
+        "styles/sidebar.css",
+        "styles/item.css",
+        "styles/modal.css"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

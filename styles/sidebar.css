@@ -1,0 +1,70 @@
+#sc-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  z-index: 2147483646;
+  transition: right 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+#sc-sidebar.open {
+  right: 0;
+}
+
+.sc-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sc-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+#sc-close {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+}
+
+#sc-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.sc-empty {
+  text-align: center;
+  color: #9ca3af;
+  margin-top: 40px;
+}
+
+.sc-add-btn {
+  margin: 16px;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sc-add-btn:hover {
+  background: #1d4ed8;
+}

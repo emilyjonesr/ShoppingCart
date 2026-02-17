@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 220px;
+      padding: 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+    }
+    h3 {
+      margin: 0 0 12px 0;
+      font-size: 16px;
+    }
+    .count {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2563eb;
+      margin: 8px 0;
+    }
+    .label {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #ef4444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #dc2626;
+    }
+    button:disabled {
+      background: #d1d5db;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h3>ShoppingCart</h3>
+  <div class="count" id="count">0</div>
+  <div class="label">items in cart</div>
+  <button id="clear">Clear All Items</button>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
