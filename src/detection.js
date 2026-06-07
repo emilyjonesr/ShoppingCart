@@ -2,7 +2,7 @@ function isShoppingSite() {
   const hostname = window.location.hostname.toLowerCase();
   
   const shoppingDomains = [
-    'amazon', 'ebay', 'etsy', 'shopify', 'walmart', 'target', 'bestbuy',
+    'azazie', 'amazon', 'ebay', 'etsy', 'shopify', 'walmart', 'target', 'bestbuy',
     'nordstrom', 'macys', 'nike', 'adidas', 'zara', 'hm.com', 'uniqlo',
     'asos', 'revolve', 'ssense', 'farfetch', 'net-a-porter', 'sephora',
     'ulta', 'yesstyle', 'shein', 'alibaba', 'aliexpress', 'wayfair',
@@ -10,7 +10,8 @@ function isShoppingSite() {
     'oldnavy', 'jcrew', 'bananarepublic', 'anthropologie', 'urbanoutfitters',
     'freepeople', 'princesspolly', 'showpo', 'nastygal', 'prettylittlething',
     'boohoo', 'missguided', 'lulus', 'shopbop', 'zappos', 'footlocker',
-    'eastbay', 'finish-line', 'dickssportinggoods', 'rei', 'patagonia'
+    'eastbay', 'finish-line', 'dickssportinggoods', 'rei', 'patagonia', 'fashionnova',
+    'mango', 'hellomolly'
   ];
   
   if (shoppingDomains.some(domain => hostname.includes(domain))) return true;
