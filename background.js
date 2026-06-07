@@ -5,3 +5,7 @@ chrome.runtime.onMessage.addListener((message) => {
     chrome.action.setBadgeBackgroundColor({ color: '#2563eb' });
   }
 });
+
+chrome.action.onClicked.addListener((tab) => {
+  chrome.tabs.sendMessage(tab.id, { type: 'TOGGLE_SIDEBAR' });
+});

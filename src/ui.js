@@ -180,7 +180,7 @@ const CSS = `
   }
   
   .sc-add-btn {
-    margin: 16px;
+    margin: 16px 16px 8px;
     padding: 12px;
     background: #2563eb;
     color: white;
@@ -192,6 +192,25 @@ const CSS = `
   }
   
   .sc-add-btn:hover { background: #1d4ed8; }
+
+  .sc-clear-btn {
+    margin: 0 16px 16px;
+    padding: 12px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .sc-clear-btn:hover { background: #dc2626; }
+
+  .sc-clear-btn:disabled {
+    background: #d1d5db;
+    cursor: not-allowed;
+  }
   
   #sc-modal {
     position: fixed;
@@ -299,12 +318,21 @@ function createSidebar() {
     </div>
     <div id="sc-items"></div>
     <button id="sc-add-item" class="sc-add-btn">+ Add Current Item</button>
+    <button id="sc-clear-cart" class="sc-clear-btn">Clear Cart</button>
   `;
   sidebarShadow.appendChild(sidebar);
   document.body.appendChild(sidebarHost);
   
   sidebarShadow.getElementById('sc-close').addEventListener('click', closeSidebar);
   sidebarShadow.getElementById('sc-add-item').addEventListener('click', showAddModal);
+  sidebarShadow.getElementById('sc-clear-cart').addEventListener('click', () => {
+    if (confirm('Clear all items from cart?')) {
+      chrome.storage.local.set({ cart: [] }, () => {
+        loadCart();
+        updateBadge();
+      });
+    }
+  });
 }
 
 function toggleSidebar() {

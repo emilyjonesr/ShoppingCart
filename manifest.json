@@ -3,10 +3,8 @@
   "name": "ShoppingCart",
   "version": "1.0",
   "description": "Universal Shopping Cart",
-  "permissions": ["storage", "activeTab"],
-  "action": {
-    "default_popup": "popup.html"
-  },
+  "permissions": ["storage", "activeTab", "tabs"],
+  "action": {},
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
